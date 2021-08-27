@@ -1,4 +1,4 @@
-### TOP 😎👌👌👌
+### introduction to my person
 
 - 🔭 I’m currently working on my brain 
 - 💬 Ask me
