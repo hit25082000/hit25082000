@@ -1,10 +1,6 @@
 
-### i'm Luiz this it my introduction to my person
 
-- 🔭 I’m currently working on my brain learning more about js and css
-- 🚀 Working every day to make my future dreams real
-- 🐱‍👤 One dream is have the resources to be a big game developer 
-- 💖 knowing this i plan and structure my life to make it possible over time
+- 🔭 I’m currently working on my brain learning more about .Net core 6 and C#
 
 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 
