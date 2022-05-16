@@ -7,14 +7,14 @@ namespace Luiz
         static void getCurrentWorkplace(String LuizEduardo)
         {
                 var company = "Infortech-MS";
-                ver position = "Stag";
+                var position = "Stag";
                 return position + " in " + company;
         }
 
         static void getDailyPratice()
         {   
             return
-                c#,
+                C#,
                 Javascript,
                 css;
         }
