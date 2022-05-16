@@ -8,7 +8,7 @@ namespace Luiz
         {
                 var company = "Infortech-MS";
                 ver position = "Stag";
-                return position + " in " + company 
+                return position + " in " + company;
         }
 
         static void getDailyPratice()
@@ -16,7 +16,7 @@ namespace Luiz
             return
                 c#,
                 Javascript,
-                css
+                css;
         }
 
         public void getFutureGoal()
