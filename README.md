@@ -1,31 +1,28 @@
 ```c#
 
-namespace Luiz;
-
-class About extends Me
+namespace Luiz
 {
-    static void getCurrentWorkplace(String LuizEduardo)
+    class About extends Me
     {
-        return [
-            'workplace' => [
-                'company' => 'Infortech-MS',
-                'position' => 'stag'         
-            ]
-        ];
-    }
+        static void getCurrentWorkplace(String LuizEduardo)
+        {
+                var company = "Infortech-MS";
+                ver position = "Stag";
+                return position + " in " + company 
+        }
 
-    static void getDailyKnowledge()
-    {
-        return [
-            c#::class,
-            Javascript::class,
-            css::class,
-        ];
-    }
+        static void getDailyPratice()
+        {   
+            return
+                c#,
+                Javascript,
+                css
+        }
 
-    public void getFutureGoal()
-    {
-        return 'do !important, GameDev etc';
+        public void getFutureGoal()
+        {
+            return Console.WriteLine('life-Style !important, GameDev etc');
+        }
     }
 }
 ```
