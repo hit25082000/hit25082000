@@ -1,4 +1,4 @@
-<?c#
+```c#
 
 namespace Luiz;
 
@@ -28,7 +28,7 @@ class About extends Me
         return 'do !important, GameDev etc';
     }
 }
-
+```
 
 <a href="https://dandy-zephyr-8b8.notion.site/Programa-o-8ccded93336a4217bd52914f1a750845"> <img width="100px" src ="https://img.icons8.com/nolan/344/notion.png" alt="notion"></a>  
 
