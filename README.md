@@ -35,9 +35,10 @@ namespace Luiz
 </div>
 
  ##
- <div align="center">
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&lines=You're+Talking+to+Me%3F)](https://git.io/typing-svg)
- ##
+ 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&color=F70909&center=true&vCenter=true&lines=You're+Talking+to+Me%3F)](https://git.io/typing-svg)
+
+##
 
 <div> 
   <a href="https://www.instagram.com/lil.iz.25/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
