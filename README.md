@@ -26,8 +26,7 @@ namespace Luiz
     }
 }
 ```
-<div style="display: inline_block"><br>
-    <a href="https://dandy-zephyr-8b8.notion.site/Programa-o-8ccded93336a4217bd52914f1a750845"> <img height="30" width="40" src ="https://img.icons8.com/nolan/344/notion.png" alt="notion"></a> 
+<div style="display: inline_block"><br>   
   <img align="center" alt="Rafa-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Rafa-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="Rafa-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
@@ -35,6 +34,9 @@ namespace Luiz
   <img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">    
 </div>
 
+ ##
+ <div align="center">
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&lines=You're+Talking+to+Me%3F)](https://git.io/typing-svg)
  ##
 
 <div> 
