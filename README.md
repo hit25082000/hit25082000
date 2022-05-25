@@ -38,8 +38,7 @@ namespace Luiz
   <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-  <img align="center" alt="c" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c.svg">
-  <img align="center" alt="cpp" height="30" width="40" src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png"> 
+  <img align="center" alt="cpp" height="30" width="30" src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png"> 
   <img align="center" alt="Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
 </div>
 
