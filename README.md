@@ -1,6 +1,5 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&color=F70909&center=true&vCenter=true&lines=You're+Talking+to+Me%3F)](https://git.io/typing-svg)
 
-
 ```c#
 
 namespace Luiz
@@ -35,7 +34,6 @@ namespace Luiz
 ```
 <div style="display: inline_block"><br>   
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
   <img align="center" alt="cpp" height="30" width="30" src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png"> 
