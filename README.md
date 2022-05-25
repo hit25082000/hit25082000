@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&color=000000&background=F7F527&center=true&vCenter=true&multiline=true&lines=You're+talking+to+me+%3F+)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&color=FF0707&background=F7F52700&center=true&vCenter=true&multiline=true&lines=You're+talking+to+me+%3F+)](https://git.io/typing-svg)
 
 ```c#
 
