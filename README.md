@@ -17,7 +17,7 @@ namespace Luiz
         {   
             return
                 C#,
-                Javascript,
+                Javascript;
         }
 
         public void getFutureGoal()
