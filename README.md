@@ -1,3 +1,4 @@
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&color=FF0707&background=F7F52700&center=true&vCenter=true&multiline=true&lines=You're+talking+to+me+%3F+)](https://git.io/typing-svg)
 ```c#
 
 namespace Luiz
@@ -41,9 +42,3 @@ namespace Luiz
       <a align="center" href = "mailto:domingues-pc@hotmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
       <a align="center" href="https://www.linkedin.com/in/luiz-eduardo-domingues-634156214/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 </div>
-
-<br>
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=roboto&color=FF0707&background=F7F52700&center=true&vCenter=true&multiline=true&lines=You're+talking+to+me+%3F+)](https://git.io/typing-svg)
-
-
