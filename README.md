@@ -28,7 +28,7 @@ namespace Luiz
 }
 ```
 
-<div align="center"> <strong>Already see</strong> &nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp; <strong>Social Medias</strong></div>
+<div display="flex" justify-content="space-around"> <strong>Already see</strong> &nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp; <strong>Social Medias</strong></div>
 
 <div style="display: inline;" align="center"><br>      
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
