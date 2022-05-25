@@ -13,16 +13,11 @@ namespace Luiz
                 return position + " in " + company;
         }
 
-        static void getDailyPratice()
+        static void mainFocus()
         {   
             return
                 C#,
                 Javascript,
-                css,
-                C,
-                C++,
-                unity,
-                python;
         }
 
         public void getFutureGoal()
@@ -32,6 +27,9 @@ namespace Luiz
     }
 }
 ```
+
+# I've seen about
+ 
 <div style="display: inline_block"><br>   
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
