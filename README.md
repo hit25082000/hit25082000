@@ -30,7 +30,7 @@ namespace Luiz
 
 <div style="display: flex; justify-content:space-around;"> <strong>Already see</strong> <strong>Social Medias</strong></div>
 
-<div style="display: inline;justify-content:space-around;"><br>      
+<div style="display: inline; justify-content:space-around;"><br>      
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
