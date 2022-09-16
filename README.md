@@ -14,14 +14,12 @@ namespace Luiz
 
         static void mainFocus()
         {   
-            return
-                C#,
-                Javascript;
+            return "C#, Angular";
         }
 
         public void getFutureGoal()
         {
-            return Console.WriteLine('I want to have a beautiful life and become a GameDev soon');
+            return Console.WriteLine('Get much money to pay the development of games i create in my mind.');
         }
     }
 }
