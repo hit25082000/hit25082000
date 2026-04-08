@@ -8,7 +8,7 @@ namespace Luiz
         static void getCurrentWorkplace(String LuizEduardo)
         {
                 var company = "Infortech-MS";
-                var position = "Stag";
+                var position = "Pleno";
                 return position + " in " + company;
         }
 
