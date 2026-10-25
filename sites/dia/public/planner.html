@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f2"><meta name="description" content="Seu espaço para escrever, escolher prioridades e planejar o dia. Sem distrações.">
+  <title>Dia — seu espaço de planejamento</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23788242'/%3E%3Cpath d='M12 11h7c13 0 13 18 0 18h-7Z' fill='none' stroke='%23fff' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+<symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></symbol>
+<symbol id="i-write" viewBox="0 0 24 24"><path d="m15 5 4 4M4 20l5-1L21 7a2.8 2.8 0 0 0-4-4L5 15l-1 5Z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M17 4v16"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A9 9 0 0 1 8.5 4 9 9 0 1 0 20 15.5Z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+</defs></svg>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Ir para hoje">dia<span>.</span></a>
+  <div class="toolbar-divider"></div>
+  <div class="date-controls">
+    <button class="icon-button previous" id="prevDay" aria-label="Dia anterior" title="Dia anterior"><svg><use href="#i-chevron"/></svg></button>
+    <button class="date-button" id="dateButton" aria-label="Escolher data"><span id="dateLabel"></span><svg><use href="#i-calendar"/></svg></button>
+    <button class="icon-button" id="nextDay" aria-label="Próximo dia" title="Próximo dia"><svg><use href="#i-chevron"/></svg></button>
+    <button class="today-button" id="todayButton">Hoje</button>
+  </div>
+  <div class="topbar-spacer"></div>
+  <span class="save-status" id="saveStatus" role="status"><span class="status-dot"></span><span id="saveText">Salvo neste navegador</span></span>
+  <div class="view-switch" role="group" aria-label="Visualização">
+    <button class="active" id="dayView" aria-pressed="true" title="Ver anotações e planejamento"><svg><use href="#i-grid"/></svg><span>Planejar</span></button>
+    <button id="writeView" aria-pressed="false" title="Usar toda a área para anotações"><svg><use href="#i-write"/></svg><span>Só escrever</span></button>
+  <button id="weekView" aria-pressed="false" title="Planejar a semana"><svg><use href="#i-calendar"/></svg><span>Semana</span></button>
+  </div>
+  <button class="icon-button" id="settingsButton" title="Configurar períodos disponíveis" aria-label="Configurações de foco"><svg><use href="#i-settings"/></svg></button>
+  <button class="icon-button fullscreen" id="fullscreenButton" title="Tela cheia" aria-label="Alternar tela cheia"><svg><use href="#i-expand"/></svg></button>
+  <div class="menu-wrapper">
+    <button class="icon-button" id="menuButton" aria-label="Mais opções" aria-expanded="false" aria-controls="optionsMenu"><svg><use href="#i-more"/></svg></button>
+    <div class="options-menu" id="optionsMenu" hidden>
+      <p>SEU CADERNO</p>
+      <button id="jevSettingsButton">IA · Jev</button>
+      <button id="themeButton"><svg><use href="#i-moon"/></svg>Alternar tema</button>
+      <button id="exportButton"><svg><use href="#i-download"/></svg>Exportar backup (.json)</button>
+      <button id="markdownButton"><svg><use href="#i-write"/></svg>Exportar este dia (.md)</button>
+      <button id="importButton"><svg class="flip"><use href="#i-download"/></svg>Importar backup</button>
+      <div class="menu-note">Seus dados ficam neste navegador.<br>Exporte um backup para guardá-los.</div>
+    </div>
+  </div>
+</header>
+<main class="workspace" id="workspace">
+  <section class="notes-panel" aria-labelledby="notesHeading">
+    <div class="panel-heading notes-heading"><h1 id="notesHeading"><span class="section-number">01</span>Anotações</h1><div class="notes-tools"><span class="quiet" id="wordCount">Seu espaço de pensar</span><button id="convertNotes" class="convert-button" title="Selecione um trecho ou use todas as anotações">Transformar em plano <svg><use href="#i-arrow"/></svg></button></div></div>
+    <textarea id="notes" class="main-notes" aria-label="Anotações do dia" spellcheck="true" placeholder="Comece por aqui.&#10;Tire as ideias da cabeça.&#10;&#10;Este espaço é todo seu."></textarea>
+    <div class="notes-bottom"><span id="notesDate"></span><span class="quiet">Uma coisa de cada vez.</span></div>
+  </section>
+  <div class="resize-handle" id="resizeNotes" role="separator" aria-orientation="vertical" aria-label="Ajustar espaço das anotações" aria-valuenow="48" aria-valuemin="26" aria-valuemax="66" tabindex="0"></div>
+  <section class="priorities-panel" aria-labelledby="prioritiesHeading">
+    <div class="panel-heading"><h2 id="prioritiesHeading"><span class="section-number">02</span>O que importa</h2><span id="taskProgress" class="progress-label">0/0</span></div>
+    <div class="priority-content"><div id="gainRequirement" class="gain-requirement" role="status"></div>
+      <div class="main-priority">
+        <div class="eyebrow"><span class="tiny-sun">✳</span> A ENTREGA DO DIA</div>
+        <textarea id="mainPriority" rows="3" aria-label="Entrega principal do dia" placeholder="Se eu fizer uma coisa hoje, será…"></textarea>
+        <label class="priority-done"><input type="checkbox" id="priorityDone" aria-label="Entrega concluída"><span>Entrega concluída</span><span class="done-spark">✓</span></label>
+      </div>
+      <div class="task-section">
+        <div class="subheading"><h3>Próximas ações</h3><span class="quiet">Um passo por vez</span></div>
+        <div id="taskList" class="task-list"></div>
+        <div class="new-task-purpose"><label for="newTaskPurpose">Nova ação:</label><select id="newTaskPurpose"><option value="gain">Produção de ganho</option><option value="loss">Prevenção de perda</option><option value="routine">Rotina / pessoal</option><option value="unclassified">A classificar</option></select></div><form id="taskForm" class="add-task"><svg><use href="#i-plus"/></svg><input id="taskInput" maxlength="500" placeholder="Adicionar uma ação…" aria-label="Nova ação" autocomplete="off"><button class="add-task-submit" type="submit" aria-label="Adicionar ação" title="Adicionar ação"><svg><use href="#i-arrow"/></svg></button></form>
+      </div>
+      <div class="pending-section"><div class="subheading"><h3>Pendências por prioridade</h3><button id="reviewPending" class="priority-link">Revisar</button></div><p class="priority-explanation">Prazo vencido/hoje → prioridade escolhida → ganho no desempate.</p><div id="pendingPreview"></div></div><div class="remember-section"><div class="subheading"><h3>Não esquecer</h3><button id="newReminder" class="reminder-add" title="Criar lembrete com data e horário"><svg><use href="#i-bell"/></svg>Lembrete</button></div><textarea id="remember" aria-label="Lembretes e ideias para depois" placeholder="Ideias, lembretes e coisas para depois…"></textarea><div id="reminderList" class="reminder-list"></div><p id="reminderTip" class="reminder-tip">Precisa de um aviso no celular? Crie um lembrete com data e horário.</p></div>
+    </div>
+  </section>
+  <div class="resize-handle" id="resizePlan" role="separator" aria-orientation="vertical" aria-label="Ajustar espaço do planejamento" aria-valuenow="25" aria-valuemin="18" aria-valuemax="45" tabindex="0"></div>
+  <section class="schedule-panel" aria-labelledby="scheduleHeading">
+    <div class="panel-heading"><h2 id="scheduleHeading"><span class="section-number">03</span>Meu tempo</h2><button class="icon-button add-block" id="addBlock" aria-label="Adicionar bloco de tempo" title="Adicionar bloco de tempo"><svg><use href="#i-plus"/></svg></button></div>
+    <div class="day-legend" aria-label="Cores do planejamento"><span class="legend-deep">Deep</span><span class="legend-shallow">Shallow</span><span class="legend-enjoy">Desfrute</span></div><div class="agenda-date"><span id="agendaDay"></span><span id="scheduledTotal">Sem blocos</span></div>
+    <div class="timeline-scroll" id="timelineScroll"><div class="timeline" id="timeline"><div id="availabilityBackground" class="availability-background" aria-hidden="true"></div><div id="hourLines"></div><div id="events"></div><div class="now-line" id="nowLine" hidden><span></span></div></div></div>
+  </section>
+</main>
+<section id="weeklyWorkspace" class="weekly-workspace" aria-label="Planejamento semanal" hidden>
+  <div class="week-toolbar"><div><h1>Storyboard da semana</h1><span id="weekRange"></span></div><div class="week-legend"><span class="legend-deep">Deep work</span><span class="legend-shallow">Shallow work</span><span class="legend-enjoy">Desfrute</span><span class="quiet">Fundo suave: disponível · cartão: agendado</span></div><button id="weekAddBlock" class="outline-button"><svg><use href="#i-plus"/></svg>Bloco</button></div>
+  <div class="weekly-layout"><aside class="week-notebook"><label for="weekGoals">Resultados da semana</label><textarea id="weekGoals" maxlength="500000" placeholder="O que precisa sair do papel nesta semana?&#10;&#10;Escolha até 3 resultados concretos."></textarea><label for="weekNotes">Anotações da semana</label><textarea id="weekNotes" maxlength="500000" placeholder="Ideias, decisões e espaço para pensar…"></textarea><button id="convertWeekNotes" class="convert-button">Transformar notas em plano <svg><use href="#i-arrow"/></svg></button><button id="weekSettings" class="week-settings-link">Ajustar períodos disponíveis</button></aside><div id="weekBoard" class="week-board"></div></div>
+</section>
+<dialog id="focusDialog" class="focus-dialog"><form id="focusForm"><div class="dialog-heading"><div><h2>Seu ritmo de trabalho</h2><p>Defina os períodos disponíveis em cada dia da semana.</p></div><button type="button" class="icon-button close-dialog" aria-label="Fechar configurações"><svg><use href="#i-close"/></svg></button></div><div class="focus-explainer"><span class="legend-deep">Deep work · criar, estudar, desenvolver</span><span class="legend-shallow">Shallow work · tarefas operacionais</span><span class="legend-enjoy">Desfrute · depois do trabalho</span></div><p class="settings-hint" id="focusHint"></p><div id="availabilityEditor" class="availability-editor"></div><p id="focusError" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" id="copyMonday" class="outline-button">Copiar segunda para ter–sex</button><button type="submit" class="primary-button">Salvar períodos <svg><use href="#i-check"/></svg></button></div></form></dialog>
+<dialog id="suggestDialog" class="suggest-dialog"><form id="suggestForm"><div class="dialog-heading"><div><h2>Das anotações para a ação</h2><p>Revise os itens antes de adicionar. Suas anotações serão mantidas.</p></div><button type="button" class="icon-button close-dialog" aria-label="Fechar sugestões"><svg><use href="#i-close"/></svg></button></div><div class="suggest-controls"><label for="suggestScope">Buscar espaço em</label><select id="suggestScope"><option value="1">Dia selecionado</option><option value="7" selected>Próximos 7 dias</option></select><button type="button" id="recalculateSuggestions" class="outline-button">Recalcular horários</button></div><div class="suggest-info" id="suggestInfo"></div><div id="suggestList" class="suggest-list"></div><p class="suggest-disclosure">Até 40 linhas por vez. Classificação por palavras-chave e encaixe nos seus períodos livres. Deep work usa o primeiro bloco de foco disponível; desfrute fica após o trabalho. Você decide o que entra.</p><p id="suggestError" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="outline-button close-dialog">Cancelar</button><button type="submit" id="confirmSuggestions" class="primary-button">Adicionar selecionados <svg><use href="#i-check"/></svg></button></div></form></dialog>
+
+<dialog id="dateDialog" class="compact-dialog"><form id="dateForm"><div class="dialog-heading"><h2>Escolher um dia</h2><button type="button" class="icon-button close-dialog" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></div><label for="datePicker">Data do planejamento</label><input type="date" id="datePicker" required><div class="dialog-actions"><button type="submit" class="primary-button">Abrir dia <svg><use href="#i-arrow"/></svg></button></div></form></dialog>
+<dialog id="blockDialog" class="block-dialog"><form id="blockForm"><div class="dialog-heading"><h2 id="blockDialogTitle">Um tempo para…</h2><button type="button" class="icon-button close-dialog" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></div><label for="blockTitle">O que você vai fazer?</label><input id="blockTitle" maxlength="200" placeholder="Ex.: desenvolver uma melhoria da Gaby" required autocomplete="off"><div class="time-inputs"><div><label for="blockStart">Começa</label><input type="time" id="blockStart" required></div><span>—</span><div><label for="blockEnd">Termina</label><input type="time" id="blockEnd" required></div></div><label for="blockNote">Anotação <span class="quiet">(opcional)</span></label><textarea id="blockNote" rows="3" maxlength="3000" placeholder="Qual é o próximo passo?"></textarea><div class="block-classification"><label for="blockType">Tipo de atividade</label><select id="blockType"><option value="deep">● Deep work · concentração</option><option value="shallow">● Shallow work · operacional</option><option value="enjoy">● Desfrute · descanso e lazer</option><option value="other">● Outro compromisso</option></select><p class="quiet">A cor acompanha o tipo no dia e na semana.</p><label for="blockPurpose">Finalidade</label><select id="blockPurpose"><option value="gain">Produção de ganho</option><option value="loss">Prevenção de perda</option><option value="routine">Rotina / pessoal</option><option value="unclassified" selected>A classificar</option></select></div><p id="blockError" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" id="deleteBlock" class="danger-button" hidden>Excluir bloco</button><button type="submit" class="primary-button">Salvar bloco <svg><use href="#i-check"/></svg></button></div></form></dialog>
+<dialog id="reminderDialog" class="reminder-dialog"><form id="reminderForm"><div class="dialog-heading"><div><h2 id="reminderDialogTitle">Um lembrete para…</h2><p>Vincule uma anotação a uma data e a um horário.</p></div><button type="button" class="icon-button close-dialog" aria-label="Fechar lembrete"><svg><use href="#i-close"/></svg></button></div><label for="reminderTitle">O que você precisa lembrar?</label><input id="reminderTitle" maxlength="200" required placeholder="Ex.: enviar o orçamento"><div class="reminder-datetime"><div><label for="reminderDate">Data do lembrete</label><input id="reminderDate" type="date" min="1900-01-01" max="2100-12-31" required></div><div><label for="reminderTime">Horário do lembrete</label><input id="reminderTime" type="time" required></div></div><p class="reminder-timezone">Horário de Cuiabá · America/Cuiaba</p><label for="reminderDescription">Detalhes <span class="quiet">(opcional)</span></label><textarea id="reminderDescription" rows="3" maxlength="3000" placeholder="Anote o contexto do lembrete…"></textarea><div class="calendar-howto"><strong>Para avisar no celular</strong><ol><li>Abra o lembrete no Google Agenda.</li><li>Configure a notificação <b>na hora do evento</b> e salve.</li><li>Use a mesma conta no celular, com as notificações da Agenda ativadas.</li></ol><p>O Dia abre o formulário preenchido. O evento só é criado quando você salva no Google; alterações aqui não atualizam o evento lá.</p><a href="https://support.google.com/calendar/answer/37242?hl=pt-BR" target="_blank" rel="noopener noreferrer">Como ativar as notificações</a></div><p id="reminderExternalStatus" class="reminder-external-status" role="status"></p><p id="reminderError" class="form-error" role="alert"></p><div class="reminder-dialog-actions"><button type="button" id="saveReminder" class="outline-button">Salvar aqui</button><button type="button" id="downloadReminder" class="outline-button">Baixar .ics</button><button type="submit" id="googleReminder" class="primary-button">Salvar e abrir Google Agenda <svg><use href="#i-arrow"/></svg></button></div><button type="button" id="confirmGoogleReminder" class="confirm-calendar" hidden>Já salvei no Google e configurei a notificação</button><button type="button" id="retryGoogleReminder" class="retry-calendar" hidden>Não salvei; reabrir formulário</button></form></dialog>
+<dialog id="taskPriorityDialog" class="task-priority-dialog"><form id="taskPriorityForm"><div class="dialog-heading"><h2>Finalidade e prioridade</h2><button type="button" class="icon-button close-dialog" aria-label="Fechar prioridade">×</button></div><label for="priorityTaskText">Tarefa</label><textarea id="priorityTaskText" maxlength="500" rows="3" required></textarea><label for="taskPurpose">Finalidade</label><select id="taskPurpose"><option value="gain">Produção de ganho</option><option value="loss">Prevenção de perda</option><option value="routine">Rotina / pessoal</option><option value="unclassified">A classificar</option></select><label for="taskPriority">Prioridade</label><select id="taskPriority"><option value="1">Alta</option><option value="2">Média</option><option value="3">Baixa</option></select><label for="taskDueDate">Prazo com consequência real (opcional)</label><input type="date" id="taskDueDate" min="1900-01-01" max="2100-12-31"><p class="priority-explanation">Ganho: criar resultado futuro. Prevenção: proteger algo que você já tem. Uma tarefa de ganho precisa fazer parte do dia; urgências reais podem vir antes.</p><div class="dialog-actions"><button type="submit" class="primary-button">Salvar prioridade</button></div></form></dialog><dialog id="pendingDialog" class="pending-dialog"><div class="dialog-heading"><div><h2>Pendências que merecem atenção</h2><p>Inclui tarefas abertas até o dia selecionado e prazos já exigíveis.</p></div><button type="button" class="icon-button close-dialog" aria-label="Fechar pendências">×</button></div><p class="priority-explanation">As sugestões abaixo usam regras locais. Nenhuma IA está conectada.</p><button id="analyzeWithJev" class="outline-button">Classificar com Jev</button><p class="priority-explanation">O Jev só consulta as tarefas que você selecionar e apresenta sugestões para revisão.</p><button id="suggestPurposes" class="outline-button">Sugerir categorias por regras</button><div id="purposeSuggestions"></div><div id="pendingAll"></div></dialog>
+<dialog id="jevDialog" class="pending-dialog"><div class="dialog-heading"><div><h2>Organizar com Jev</h2><p>Finalidade e prioridade, com revisão antes de aplicar.</p></div><button type="button" class="icon-button" id="closeJev" aria-label="Fechar Jev">×</button></div><p id="jevStatus" role="status"></p><p class="priority-explanation">A chave é lida apenas no servidor. Cadastre <b>TYPESAFE_API_KEY</b> como segredo no ambiente da nuvem. Esta tela nunca pede nem mostra sua chave.</p><button id="refreshJevStatus" class="outline-button">Verificar configuração</button><div id="jevTaskSelection"></div><label for="jevContext" class="jev-context-label">Contexto para avaliar o resultado (opcional)</label><textarea id="jevContext" maxlength="800" rows="3" placeholder="Ex.: objetivo da semana, prazo com consequência ou problema que está bloqueando o negócio."></textarea><p class="priority-explanation">Ao analisar, o título, o prazo e o contexto das tarefas selecionadas são enviados à TypeSafe. A chamada pode consumir seus créditos da API. Até 10 tarefas por vez.</p><button id="runJev" class="primary-button">Analisar tarefas selecionadas</button><p id="jevError" class="form-error" role="alert"></p><div id="jevResults"></div></dialog>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+<div class="toast" id="toast" role="status" hidden><span id="toastText"></span><button id="undoButton" hidden>Desfazer</button><button class="toast-close" id="closeToast" aria-label="Fechar aviso">×</button></div>
+<script src="planner-core.js"></script>
+<script src="priority-core.js"></script>
+<script src="reminder-core.js"></script>
+<script src="app.js"></script>
+<script src="planner-ui.js"></script>
+<script src="reminder-ui.js"></script>
+<script src="priority-ui.js"></script>
+<script src="jev-ui.js"></script>
+</body>
+</html>

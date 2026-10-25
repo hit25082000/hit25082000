@@ -23,3 +23,8 @@ namespace Luiz
         }
     }
 }
+
+
+## Projetos
+
+- [Dia — anotações e planejamento](sites/dia/README.md): [abrir site](https://dia-luizao-planejamento.luiz-domingues750471.chatgpt.site) · [configurar JEV no Codex](sites/dia/CODEX.md).
